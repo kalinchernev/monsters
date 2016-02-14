@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+{% block main_block %}
+    <div class="row">
+        <div class="col-md-5 team-card">
+            <div class="team-heading col-md-12">
+                <h3 class="team-name">{{ team_name }} клас</h3>
+            </div>
+            <div class="artist-collage col-md-12">
+                <img class="img-thumbnail" src="http://watermarked.cutcaster.com/cutcaster-photo-801083108-happy-kids-with-teacher-in-school-classroom.jpg" alt="">
+            </div>
+            <div class="listing-tab col-md-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="team-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#track" aria-controls="track" role="tab" data-toggle="tab">Активност</a></li>
+                    <li role="presentation"><a href="#albums" aria-controls="albums" role="tab" data-toggle="tab">Ученици</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="track">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Какво</th>
+                                    <th>Резултат</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Задача: "Написани домашни"</td>
+                                    <td>
+                                        <div class="shape shape-success"  data-toggle="shape-tooltip"  title="Успешно взет">
+                                            <div class="shape-icon">
+                                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Задача: "Идване на време за час"</td>
+                                    <td>
+                                        <div class="shape shape-success"  data-toggle="shape-tooltip"  title="Успешно взет">
+                                            <div class="shape-icon">
+                                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Урок: "Сегашно просто време"</td>
+                                    <td>
+                                        <div class="shape shape-danger"  data-toggle="shape-tooltip"  title="Трябва да се повтори">
+                                            <div class="shape-icon">
+                                                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Урок: "Минало време"</td>
+                                    <td>
+                                        <div class="shape shape-success"  data-toggle="shape-tooltip"  title="Успешно взет">
+                                            <div class="shape-icon">
+                                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Тест: "Седмица 1 на 5а"</td>
+                                    <td>
+                                        <div class="shape shape-success"  data-toggle="shape-tooltip"  title="Успешно взет">
+                                            <div class="shape-icon">
+                                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Преговор: "Азбука на английски"</td>
+                                    <td>
+                                        <div class="shape shape-danger"  data-toggle="shape-tooltip"  title="Трябва да се повтори">
+                                            <div class="shape-icon">
+                                                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p><a href="/teams/5a/activity" class="btn btn-default">Виж детайли</a></p>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="albums">
+                        <ul>
+                            <li><a href="#"><img src="http://i.ytimg.com/p/PL-o37YO_uwcLPmR8QBTegC2BoJ03I3tqe/mqdefault.jpg" alt="" width="50" height="50"> Kiss kiss</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <h3 class="class-name">Училище</h3>
+            <div class="g-page" data-width="400" data-href="//plus.google.com/112020786218542952721" data-showcoverphoto="true" data-rel="publisher"></div>
+            <div class="card-section">
+                <h2 class="h3 mbm tac">Награди</h2>
+                <ul class="badgeMosaic badgeMosaic--achievements--6 list list--object">
+                    <li class="list-item badgeMosaic-item">
+                        <a href="/users/georgik/badges/583"><div class="badge badge--100 mbm mhc">
+                            <img alt="Wordsmithery Badge" class="badge-img" height="100" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/583/wordsmithery-5f2cca8f65012b45df9000ec443feb5d.png" width="100">
+                        </div>
+                        </a></li>
+                    <li class="list-item badgeMosaic-item">
+                        <a href="/users/georgik/badges/582"><div class="badge badge--100 mbm mhc">
+                            <img alt="Bullseye Badge" class="badge-img" height="100" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/582/bullseye-11b609ec6bac32b255919f670f1966b0.png" width="100">
+                        </div>
+                        </a></li>
+                    <li class="list-item badgeMosaic-item">
+                        <a href="/users/georgik/badges/534"><div class="badge badge--100 mbm mhc">
+                            <img alt="Apprentice Badge" class="badge-img" height="100" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/534/apprentice-0f19184c0b7fc1eaa3e9c89e758c5d99.png" width="100">
+                        </div>
+                        </a></li>
+                    <li class="list-item badgeMosaic-item">
+                        <a href="/users/georgik/badges/499"><div class="badge badge--100 mbm mhc">
+                            <img alt="Voyager Badge" class="badge-img" height="100" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/499/voyager-9f70792cc4c6d3aa86ad11da0d01f1f8.png" width="100">
+                        </div>
+                        </a></li>
+                    <li class="list-item badgeMosaic-item">
+                        <a href="/users/georgik/badges/532"><div class="badge badge--100 mbm mhc">
+                            <img alt="Adventurer Badge" class="badge-img" height="100" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/532/adventurer-2b3c43359d7f3f9962ddee6f44874b25.png" width="100">
+                        </div>
+                        </a></li>
+                    <li class="list-item badgeMosaic-item">
+                        <a href="/users/georgik/badges/498"><div class="badge badge--100 mbm mhc">
+                            <img alt="Wayfarer Badge" class="badge-img" height="100" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/large_badge/498/wayfarer-40cc9baa2715dd61a6feef3bd57b93b7.png" width="100">
+                        </div>
+                        </a></li>
+                </ul>
+                <div class="tac">
+                    <a href="/users/georgik/badges/achievements" class="btn btn--b">Виж всички награди</a>
+                    <a href="http://openbadges.org/" class="btn btn--b">Технически детайли</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -17,6 +17,11 @@ def leaders():
     return render_template('leaders.html')
 
 
+@app.route("/teams/<team_name>")
+def teams(team_name):
+    return render_template('team.html', team_name=team_name)
+
+
 @app.route("/about")
 def about():
     return render_template('about.html')
@@ -31,6 +36,10 @@ def contacts():
 def serveStaticResource(resource):
     return send_from_directory('static/', resource)
 
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
     app.run()

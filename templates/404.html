@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block main_block %}
+    <img src="http://www.designfinder.net/uploads/gallery/design-404-error-page-467.png" class="img-responsive" alt="Responsive image">
+    <p>Упс, имаме код 404, това не е добре!</p>
+    <p>Или работим по тази страница, или имаме неочакван бъг ;)</p>
+    <p>Моля, <a href="{{ url_for('contacts') }}">докладвайте ни проблема</a>.</p>
+{% endblock %}
