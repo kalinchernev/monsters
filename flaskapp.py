@@ -17,6 +17,16 @@ def leaders():
     return render_template('leaders.html')
 
 
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
+
+@app.route("/contacts")
+def contacts():
+    return render_template('contacts.html')
+
+
 @app.route('/<path:resource>')
 def serveStaticResource(resource):
     return send_from_directory('static/', resource)
