@@ -6,5 +6,6 @@
 
 HOME=$HOME/app-root/runtime
 cd ~/repo
+npm update -g
 npm install bower
 ./node_modules/.bin/bower install
