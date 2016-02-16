@@ -11,13 +11,14 @@
             <div class="listing-tab col-md-12">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="team-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#track" aria-controls="track" role="tab" data-toggle="tab">Активност</a></li>
-                    <li role="presentation"><a href="#albums" aria-controls="albums" role="tab" data-toggle="tab">Ученици</a></li>
+                    <li role="presentation" class="active"><a href="#activity" aria-controls="activity" role="tab" data-toggle="tab">Активност</a></li>
+                    <li role="presentation"><a href="#students" aria-controls="students" role="tab" data-toggle="tab">Ученици</a></li>
+                    <li role="presentation"><a href="#teachers" aria-controls="teachers" role="tab" data-toggle="tab">Учители</a></li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="track">
+                    <div role="tabpanel" class="tab-pane active" id="activity">
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
                                 <thead>
@@ -68,16 +69,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Тест: "Седмица 1 на 5а"</td>
-                                    <td>
-                                        <div class="shape shape-success"  data-toggle="shape-tooltip"  title="Успешно взет">
-                                            <div class="shape-icon">
-                                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>Преговор: "Азбука на английски"</td>
                                     <td>
                                         <div class="shape shape-danger"  data-toggle="shape-tooltip"  title="Трябва да се повтори">
@@ -92,9 +83,17 @@
                             <p><a href="/teams/5a/activity" class="btn btn-default">Виж детайли</a></p>
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="albums">
+                    <div role="tabpanel" class="tab-pane" id="students">
                         <ul>
-                            <li><a href="#"><img src="http://i.ytimg.com/p/PL-o37YO_uwcLPmR8QBTegC2BoJ03I3tqe/mqdefault.jpg" alt="" width="50" height="50"> Kiss kiss</a></li>
+                            <li><a href="/people/alex">Александър Радков</a></li>
+                            <li>Борислав Петров</li>
+                            <li>Ангелина Петкова</li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="teachers">
+                        <ul>
+                            <li><a href="/people/tomi">Томислав Рашков - английски език</a></li>
+                            <li>Иван Иванов - математика</li>
                         </ul>
                     </div>
                 </div>
