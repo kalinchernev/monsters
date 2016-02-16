@@ -1,0 +1,21 @@
+.profile {
+    padding: 10px;
+    transition: all .7s ease-in-out;
+    text-align: center;
+}
+
+.profile:hover {
+    background: #ccc;
+}
+
+.profile-image {
+    max-width: 150px;
+}
+
+.profile-info {
+
+}
+
+.profile-name {
+    display: block;
+}

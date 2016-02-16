@@ -22,14 +22,29 @@ def teams(team_name):
     return render_template('team.html', team_name=team_name)
 
 
+@app.route("/people")
+def people():
+    return render_template('people/people.html')
+
+
+@app.route("/people/<username>")
+def profile(username):
+    if username == 'tomi':
+        return render_template('people/profile-tomi.html')
+    elif username == 'alex':
+        return render_template('people/profile-alex.html')
+    else:
+        return redirect(url_for('people'))
+
+
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    return render_template('pages/about.html')
 
 
 @app.route("/contacts")
 def contacts():
-    return render_template('contacts.html')
+    return render_template('pages/contacts.html')
 
 
 @app.route('/<path:resource>')
@@ -39,7 +54,7 @@ def serveStaticResource(resource):
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return render_template('templates/pages/404.html'), 404
 
 if __name__ == '__main__':
     app.run()
