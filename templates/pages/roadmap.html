@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block main_block %}
+    <h2>Roadmap</h2>
+    <p>This page aims to shortly summarize the project status.</p>
+    <h3>Pages</h3>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Route</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>/</td>
+                <td>Home page for anonymous usres</td>
+                <td><span class="label label-info">draft</span></td>
+            </tr>
+            <tr>
+                <td>/home</td>
+                <td>Home page for authenticated users</td>
+                <td><span class="label label-warning">todo</span></td>
+            </tr>
+            <tr>
+                <td>/classes</td>
+                <td>List overview page of all classes</td>
+                <td><span class="label label-warning">todo</span></td>
+            </tr>
+            <tr>
+                <td>/classes/{class_name}</td>
+                <td>Detail page of a class</td>
+                <td><span class="label label-info">draft</span></td>
+            </tr>
+            <tr>
+                <td>/lessons</td>
+                <td>List overview page of all lessons</td>
+                <td><span class="label label-warning">todo</span></td>
+            </tr>
+            <tr>
+                <td>/lessons/{lesson_name}</td>
+                <td>Detail page of a lesson</td>
+                <td><span class="label label-info">draft</span></td>
+            </tr>
+            <tr>
+                <td>/people</td>
+                <td>List overview page of all users</td>
+                <td><span class="label label-info">draft</span></td>
+            </tr>
+            <tr>
+                <td>/people/{username}</td>
+                <td>Detail page of a user</td>
+                <td><span class="label label-warning">todo</span></td>
+            </tr>
+            <tr>
+                <td>/leaders</td>
+                <td>Chart with results overview for given time span</td>
+                <td><span class="label label-info">draft</span></td>
+            </tr>
+            <tr>
+                <td>/about</td>
+                <td>Project information</td>
+                <td><span class="label label-warning">draft</span></td>
+            </tr>
+            <tr>
+                <td>/contacts</td>
+                <td>Contact details and feedback page</td>
+                <td><span class="label label-warning">todo</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

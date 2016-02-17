@@ -49,7 +49,7 @@ def profile(username):
 
 @app.route("/leaders")
 def leaders():
-    return render_template('leaders.html')
+    return render_template('pages/leaders.html')
 
 
 @app.route("/about")
@@ -60,6 +60,11 @@ def about():
 @app.route("/contacts")
 def contacts():
     return render_template('pages/contacts.html')
+
+
+@app.route("/roadmap")
+def roadmap():
+    return render_template('pages/roadmap.html')
 
 
 @app.route('/<path:resource>')
