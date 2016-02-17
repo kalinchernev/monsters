@@ -1,4 +1,171 @@
 {% extends "layout.html" %}
 {% block main_block %}
-    <p>Детайлна страница на даден урок.</p>
+    <h2>Име на урока: {{ lesson_name }}</h2>
+    <div class="row">
+        <div class="col-md-4 pull-right">
+            <h3>Съюзник в урока</h3>
+            <img src="/images/monster1.jpg" alt="Демо чудовище" class="img-thumbnail">
+            <h3>Преподаватели</h3>
+            <a href="/people/tomi">
+                <div class="profile">
+                    <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/12033174_1159186747443240_361607881406814914_n.jpg?oh=da8565c65005e8bd9fd521dbc6a83bf2&oe=5768A53A" alt="Томи" class="profile-image img-circle">
+                    <span class="profile-name">Томислав Рашков</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-8 pull-left">
+            <h3>Задачи към урока</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Идване на време</div>
+                        <div class="panel-body">
+                            Описание примерна задача
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">Написани домашни</div>
+                        <div class="panel-body">
+                            Задача статус проблем
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">Входен тест</div>
+                        <div class="panel-body">
+                            Свършена задача
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">Изходен тест</div>
+                        <div class="panel-body">
+                            Задача за повтаряне
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lesson-tips-notes">
+                <h3>Tips and notes</h3>
+                <p>Grammar notes like those below can be helpful if you're having trouble with the lessons, so consider trying the lessons above before reading the notes. They'll be more helpful once you have a context for understanding them.</p>
+                <h3>Genders</h3>
+                <p>French has two grammatical genders: <strong>masculine</strong> and <strong>feminine</strong>. All nouns have a gender that you must memorize. Sometimes, the gender can be obvious: <em>une femme</em> ("a woman") is feminine. Other times, it's not obvious: <em>une pomme</em> ("an apple") is also feminine.</p>
+                <h3>Personal Subject Pronouns</h3>
+                <p>In every complete sentence, the <strong>subject</strong> is the person or thing that performs an action or is being described. This is often a noun, but a <strong>personal subject pronoun</strong> (e.g. "I", "you", or "he") can replace that noun. Like in English, pronouns have different forms based on what they replace.</p>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>English</th>
+                        <th>French</th>
+                        <th>Example</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>I</td>
+                        <td>je</td>
+                        <td><em>Je mange.</em> — I eat.</td>
+                    </tr>
+                    <tr>
+                        <td>You (singular)</td>
+                        <td>tu/vous</td>
+                        <td><em>Tu manges.</em> — You eat.</td>
+                    </tr>
+                    <tr>
+                        <td>He/It</td>
+                        <td>il</td>
+                        <td><em>Il mange.</em> — He eats.</td>
+                    </tr>
+                    <tr>
+                        <td>She/It</td>
+                        <td>elle</td>
+                        <td><em>Elle mange.</em> — She eats.</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Subject-Verb Agreement</h3>
+                <p>Notice above that the verb <em>manger</em> (as well as its English equivalent, "to eat") changes form to agree grammatically with the subject. These forms are called <strong>conjugations</strong> of that verb. Whenever you want to learn a verb's conjugation, hover your mouse over that word and press the "C" button. </p>
+                <p>Here are some conjugations for verbs you'll encounter in this unit:</p>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th><em>Manger</em> (To Eat)</th>
+                        <th><em>Être</em> (To Be)</th>
+                        <th><em>Avoir</em> (To Have)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>je</td>
+                        <td><em>je mange</em> — I eat</td>
+                        <td><em>je suis</em> — I am</td>
+                        <td><em>j'ai</em> — I have</td>
+                    </tr>
+                    <tr>
+                        <td>tu</td>
+                        <td><em>tu manges</em> — you eat</td>
+                        <td><em>tu es</em> — you are</td>
+                        <td><em>tu as</em> — you have</td>
+                    </tr>
+                    <tr>
+                        <td>il/elle/on</td>
+                        <td><em>il mange</em> — he eats</td>
+                        <td><em>il est</em> — he is</td>
+                        <td><em>il a</em> — he has</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Articles</h3>
+                <p><strong>Articles</strong> (e.g. "the" or "a") provide context for a noun. In English, articles may be omitted, but French nouns almost always have an article. French has three types of articles:</p>
+                <ul>
+                    <li><strong>Definite articles</strong> ("the") are used with specific nouns that are known to the speakers.</li>
+                    <li><strong>Indefinite articles</strong> ("a"/"an"/"one") are used for countable nouns that are unspecified or unknown to the speakers.</li>
+                    <li><strong>Partitive articles</strong> ("some"/"any") indicate a quantity of something uncountable.</li>
+                </ul>
+                <p>Articles have multiple forms, as provided in this table:</p>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Article</th>
+                        <th>Masculine</th>
+                        <th>Feminine</th>
+                        <th>Plural</th>
+                        <th>Example</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Definite</td>
+                        <td>le/l'</td>
+                        <td>la/l'</td>
+                        <td>les</td>
+                        <td><strong><em>le</em></strong> <em>chat</em> — the cat</td>
+                    </tr>
+                    <tr>
+                        <td>Indefinite</td>
+                        <td>un</td>
+                        <td>une</td>
+                        <td>des</td>
+                        <td><strong><em>une</em></strong> <em>femme</em> — a woman</td>
+                    </tr>
+                    <tr>
+                        <td>Partitive</td>
+                        <td>du/de l'</td>
+                        <td>de la/de l'</td>
+                        <td></td>
+                        <td><strong><em>de l</em></strong><em>'eau</em> — (some) water</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>It is critical to understand that articles must agree with their nouns in both gender and number. For instance, <em>le femme</em> is incorrect. It must be <em>la femme</em> because <em>la</em> is feminine and singular, just like <em>femme</em>.</p>
+
+            </div>
+        </div>
+
+    </div>
 {% endblock %}
