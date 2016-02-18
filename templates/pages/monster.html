@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block main_block %}
+    <h3>Управление на състояние</h3>
+    <div class="row">
+        <div class="col-md-9">
+            <img id="monster-demo" class="img-thumbnail img-responsive" src="/images/monster1.jpg" alt="Управление състояние демо графика">
+        </div>
+        <div class="col-md-3">
+            <form>
+                <div class="form-group">
+                    <label for="demo-step">Стъпка (%)</label>
+                    <input type="number" class="form-control" id="step" placeholder="примерно 50 (без %)" value="10">
+                </div>
+            </form>
+            <button id="increase-percentage" class="btn btn-block">Добавяне</button>
+            <button id="decrease-percentage" class="btn btn-block">Махане</button>
+            <button id="reset" class="btn btn-block">Reset</button>
+        </div>
+    </div>
+{% endblock %}

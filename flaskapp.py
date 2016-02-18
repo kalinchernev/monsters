@@ -52,6 +52,11 @@ def leaders():
     return render_template('pages/leaders.html')
 
 
+@app.route("/monster")
+def monster():
+    return render_template('pages/monster.html')
+
+
 @app.route("/about")
 def about():
     return render_template('pages/about.html')
