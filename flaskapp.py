@@ -32,11 +32,6 @@ google = oauth.remote_app('google',
                           consumer_secret=CLIENT_SECRET)
 
 
-@google.tokengetter
-def get_access_token():
-    return session.get('access_token')
-
-
 @app.route('/')
 def index():
     access_token = session.get('access_token')
@@ -145,6 +140,10 @@ def serveStaticResource(resource):
 def page_not_found(e):
     return render_template('pages/404.html'), 404
 
+
+@google.tokengetter
+def get_access_token():
+    return session.get('access_token')
 
 if __name__ == '__main__':
     app.run()
