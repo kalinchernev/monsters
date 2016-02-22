@@ -1,17 +1,40 @@
-# A basic Flask quickstart 
-*With support for serving easy APIs and static content*
+# Flask-based prototype
+Requirements
+- [python](https://www.python.org/downloads/)
 
-[![Build Status](http://img.shields.io/travis/ryanj/flask-base.svg)](https://travis-ci.org/ryanj/flask-base) [![Deploy](https://img.shields.io/badge/Launch_on-OpenShift-brightgreen.svg)](https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=python-2&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fflask-base.git&name=flask)
+Recommended
+- [virtualenv](http://virtualenv.readthedocs.org/en/latest/installation.html)
 
-[![Launch on OpenShift](http://launch-shifter.rhcloud.com/button.svg)](https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=python-2.7&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fflask-base.git&name=flask)
+## Documentation
+- [Flask](http://flask.pocoo.org/docs/0.10/)
+- [Creating a new URL serving a template](http://flask.pocoo.org/docs/0.10/quickstart/#rendering-templates)
 
-To deploy a clone of this application using the [`rhc` command line tool](http://rubygems.org/gems/rhc):
+## Local dev environment
+In the command line:
+1. `git clone git@github.com:kalinchernev/monsters.git`
+2. `cd monsters`
+3. `virtualenv env` creates compartmentized local dev environment
+4. `source env/bin/activate` where the env is the local dev environment
 
-    rhc app create flask python-2.7 --from-code=https://github.com/ryanj/flask-base.git
-    
-Or [link to a web-based clone+deploy](https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=python-2.7&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fflask-base.git) on [OpenShift Online](http://OpenShift.com) or on [your own OpenShift cloud](http://openshift.github.io): 
+The cli should give a hint for successful activation
 
-    https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=python-2.7&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fflask-base.git
+```bash
+(env) kalin@pc-name:~/projects/monsters$
+```
+Now packages and dependencies will stay in this isolated dev environment.
+
+## Installing a package
+
+```bash
+(env) kalin@pc-name:~/projects/monsters$ pip install flask-script
+```
+Where flask-script is an example package.
+
+## Installing dependencies
+
+```bash
+(env) kalin@pc-name:~/projects/monsters$ pip install -r requirements.txt
+```
 
 ## Local server
 Start a local webserver by running:
@@ -22,3 +45,6 @@ python app.py
 
 ## License
 This code is dedicated to the public domain to the maximum extent permitted by applicable law, pursuant to CC0 (http://creativecommons.org/publicdomain/zero/1.0/)
+
+## Credits
+[Openshift love for Flask](https://developers.openshift.com/en/python-flask.html)
