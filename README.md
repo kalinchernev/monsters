@@ -11,10 +11,11 @@ Recommended
 
 ## Local dev environment
 In the command line:
-1. `git clone git@github.com:kalinchernev/monsters.git`
-2. `cd monsters`
-3. `virtualenv env` creates compartmentized local dev environment
-4. `source env/bin/activate` where the env is the local dev environment
+
+- `git clone git@github.com:kalinchernev/monsters.git`
+- `cd monsters`
+- `virtualenv env` creates compartmentized local dev environment
+- `source env/bin/activate` where the env is the local dev environment
 
 The cli should give a hint for successful activation
 
