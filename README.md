@@ -1,4 +1,6 @@
 # Flask-based prototype
+
+[![Join the chat at https://gitter.im/kalinchernev/monsters](https://badges.gitter.im/kalinchernev/monsters.svg)](https://gitter.im/kalinchernev/monsters?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Requirements
 - [python](https://www.python.org/downloads/)
 
