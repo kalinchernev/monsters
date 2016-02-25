@@ -1,6 +1,8 @@
 from flask import Flask, request, session, flash, url_for, redirect, \
      render_template, abort, send_from_directory
 
+import random, string
+
 app = Flask(__name__)
 app.config.from_pyfile('flaskapp.cfg')
 
@@ -12,7 +14,9 @@ def index():
 
 @app.route('/login')
 def login():
-    return render_template('pages/login.html')
+    state = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in range(32))
+    session['state'] = state
+    return state
 
 
 @app.route("/classes")
