@@ -14,6 +14,7 @@
     <link href="/css/team-card.css" rel="stylesheet">
     <link href="/css/profile.css" rel="stylesheet">
     <link href="/css/google-like-nav.css" rel="stylesheet">
+    <link href="/css/system.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -102,6 +103,7 @@
             </div>
         </nav>
     </div>
+    <div class="messages"></div>
     {% block main_block %}{% endblock %}
     <footer class="footer">
         <p>&copy; Чудовища на успеха 2016 | <a href="{{ url_for('roadmap') }}">Roadmap</a></p>
@@ -112,8 +114,43 @@
 <script src="/bower/jquery/dist/jquery.min.js"></script>
 <script src="/bower/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/LoadGo/1.0.1/loadgo.min.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-
+<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+<script>
+    jQuery(document).ready(function($) {
+        function signInCallback(authResult) {
+            if (authResult['code']) {
+                // Hide the sign-in button now that the user is authorized
+                $('#signIn').hide();
+                // Send the one-time-use code to the server, if the server responds, write a 'login successful' message to the web page and then redirect back to the main restaurants page
+                $.ajax({
+                    type: 'POST',
+                    url: '/gconnect?state={{STATE}}',
+                    processData: false,
+                    data: authResult['code'],
+                    contentType: 'application/octet-stream; charset=utf-8',
+                    success: function (result) {
+                        // Handle or verify the server response if necessary.
+                        if (result) {
+                            $('.messages')
+                                    .addClass('bg-success')
+                                    .html('Login Successful!</br>' + result + '</br>Redirecting...');
+                        }
+                        else if (authResult['error']) {
+                            $('.messages')
+                                    .addClass('bg-danger')
+                                    .html('There was an error: ' + authResult['error']);
+                        }
+                        else {
+                            $('.messages')
+                                    .addClass('bg-danger')
+                                    .html('Failed to make a server-side call. Check your configuration and console.');
+                        }
+                    }
+                });
+            }
+        }
+    });
+</script>
 {# custom #}
 <script src="/js/team-card.js"></script>
 <script src="/js/monster-demo.js"></script>
