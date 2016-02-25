@@ -43,7 +43,18 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {% if not session.logged_in %}
-                            <li><a href="{{ url_for('login') }}">Автентикация</a></li>
+                            <li>
+                                <a id="signIn" href="{{ url_for('login') }}">
+                                    <span class="g-signin"
+                                          data-scope="openid"
+                                          data-clientid="401566787284-q944t4gcl2nn3vrla2ca32g7dmnfgd75.apps.googleusercontent.com"
+                                          data-redirecturi="postmessage"
+                                          data-accesstype="offline"
+                                          data-cookiepolicy="single_host_only"
+                                          data-callback="signInCallback"
+                                          data-approvalprompt="force">
+                                    </span>
+                                </a></li>
                         {% else %}
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
